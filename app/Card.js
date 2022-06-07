@@ -1,44 +1,40 @@
-import React from 'react';
-import {
-	View,
-	StyleSheet,
-	Text
-} from 'react-native';
-import PropTypes from 'prop-types';
+import React from "react";
+import { View, StyleSheet, Text } from "react-native";
+import PropTypes from "prop-types";
 
 export default class Column extends React.Component {
-	static propTypes = {
-		num: PropTypes.number
-	}
+  static propTypes = {
+    num: PropTypes.number,
+  };
 
-	render () {
-		return (
-			<View style={styles.container}>
-				<Text>{this.props.num}</Text>
+  render() {
+    return (
+      <View style={styles.container}>
+        <Text>{this.props.num}</Text>
 
-				<View style={styles.label}></View>
-			</View>
-		)
-	}
+        <View style={styles.label}></View>
+      </View>
+    );
+  }
 }
 
-const styles = StyleSheet.create( {
-	container: {
-		justifyContent: 'center',
-		alignItems: 'center',
-		backgroundColor: '#d8d8d8',
-		padding: 8,
-		marginVertical: 8,
-		height: 44,
-		borderRadius: 8
-	},
-	label: {
-		backgroundColor: 'lightcoral',
-		width: 32,
-		height: 8,
-		borderRadius: 4,
-		position: 'absolute',
-		top: 5,
-		right: 5
-	}
-} );
+const styles = StyleSheet.create({
+  container: {
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "#d8d8d8",
+    padding: 8,
+    marginVertical: 8,
+    height: 44,
+    borderRadius: 8,
+  },
+  label: {
+    backgroundColor: "lightcoral",
+    width: 32,
+    height: 8,
+    borderRadius: 4,
+    position: "absolute",
+    top: 5,
+    right: 5,
+  },
+});
